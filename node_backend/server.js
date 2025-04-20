@@ -18,7 +18,7 @@ const path = require('path');
 const app = express();
 
 // 🔥 Start Flask Server
-const flaskProcess = spawn('python3', [path.join(__dirname, '../flask_backend/app.py')]);
+const flaskProcess = spawn('python', [path.join(__dirname, '../flask_backend/app.py')]);
 
 flaskProcess.stdout.on('data', (data) => {
   console.log(`[FLASK]: ${data}`);
